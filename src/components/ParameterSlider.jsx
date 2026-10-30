@@ -172,7 +172,7 @@ const ParameterSlider = ({ name, label, value, min, max, step, unit, onChange, t
         <div className="relative w-full h-6 mt-1">
           {tickValues.map(tickValue => {
             const tickPosition = paramToSlider(tickValue);
-            let tickLabel = tickValue;
+            let tickLabel = String(tickValue);
             if (tickValue >= 1000) {
               tickLabel = `${tickValue/1000}T`;
             }

@@ -15,9 +15,6 @@ const MemoryCalculator = () => {
   const [memoryRequired, setMemoryRequired] = useState(0);
   const [isCalculating, setIsCalculating] = useState(false);
 
-  // Default preset ID for Llama 3.3 70B
-  const defaultPresetId = 'llama3.3-70b';
-
   useEffect(() => {
     updateMemoryCalculation();
   }, [modelParams]);
@@ -105,7 +102,6 @@ const MemoryCalculator = () => {
         </div>
         <ModelPresets
           onPresetSelect={handlePresetSelect}
-          defaultPresetId={defaultPresetId}
         />
       </div>
 
