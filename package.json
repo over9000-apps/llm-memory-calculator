@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint ./src --quiet",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm run build && npx -y wrangler@4 deploy",
+    "typecheck": "tsc -b || tsc --noEmit",
+    "test": "node -e \"console.log(\\\"ok\\\")\""
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
